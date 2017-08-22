@@ -1,4 +1,4 @@
-package com.topxgun.appbase.base;
+package com.topxgun.appbase.base.autoLayout;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
-import com.topxgun.appbase.component.partialcommunication.PartialCommunication;
+import com.topxgun.appbase.base.common.BaseActivity;
+import com.topxgun.appbase.base.common.BaseSubActivity;
 import com.topxgun.appbase.component.dialog.WaitDialog;
+import com.topxgun.appbase.component.partialcommunication.PartialCommunication;
 import com.topxgun.appbase.component.toast.CustomToast;
 import com.topxgun.appbase.dao.spf.ConfigSPF;
 
@@ -23,7 +25,7 @@ import de.greenrobot.event.EventBus;
  * 二层基础封装，可以引用三方控件，引用自定义控件等，但是不涉及任何业务层代码
  */
 
-public abstract class BaseSubFragment extends Fragment implements OnClickListener {
+public abstract class BaseAutoSubFragment extends Fragment implements OnClickListener {
 
     protected String TAG = "BaseFragment";
     // rootView
@@ -120,8 +122,8 @@ public abstract class BaseSubFragment extends Fragment implements OnClickListene
     }
 
     protected PartialCommunication getPartialCommunication() {
-        if (getActivity() instanceof BaseSubActivity) {
-            return ((BaseSubActivity) getActivity()).getPartialCommunication();
+        if (getActivity() instanceof BaseAutoSubActivity) {
+            return ((BaseAutoSubActivity) getActivity()).getPartialCommunication();
         }
         return null;
     }
@@ -146,7 +148,7 @@ public abstract class BaseSubFragment extends Fragment implements OnClickListene
      * 显示和隐藏等待框
      */
     public void showWaitDialog() {
-        if(mContext!=null&&mContext instanceof BaseAutoActivity){
+        if(mContext!=null&&mContext instanceof BaseActivity){
             ((BaseAutoActivity) mContext).mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {

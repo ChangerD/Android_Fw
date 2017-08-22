@@ -1,4 +1,4 @@
-package com.topxgun.appbase.base;
+package com.topxgun.appbase.base.common;
 
 import android.content.Context;
 import android.os.Bundle;

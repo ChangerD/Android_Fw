@@ -1,4 +1,4 @@
-package com.topxgun.appbase.base;
+package com.topxgun.appbase.base.common;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -18,7 +18,7 @@ import de.greenrobot.event.EventBus;
  * 二层基础封装，可以引用三方控件，引用自定义控件等，但是不涉及任何业务层代码
  */
 
-public abstract class BaseSubActivity extends BaseAutoActivity {
+public abstract class BaseSubActivity extends BaseActivity {
 
     protected PartialCommunication partialCommunication;
 

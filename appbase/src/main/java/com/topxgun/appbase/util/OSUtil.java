@@ -31,7 +31,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
 import com.topxgun.appbase.R;
-import com.topxgun.appbase.base.BaseApplication;
+import com.topxgun.appbase.base.common.BaseApplication;
 
 import java.io.File;
 import java.lang.reflect.Field;

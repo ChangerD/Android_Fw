@@ -1,4 +1,4 @@
-package com.topxgun.appbase.base;
+package com.topxgun.appbase.base.autoLayout;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+
 import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.lang.ref.WeakReference;
@@ -15,7 +16,7 @@ import java.util.HashMap;
 
 public class BaseAutoActivity extends AutoLayoutActivity implements OnClickListener {
 
-    protected final static String TAG = "BaseAutoActivity";
+    protected final static String TAG = "BaseActivity";
 
     protected Context mContext;
     /**
